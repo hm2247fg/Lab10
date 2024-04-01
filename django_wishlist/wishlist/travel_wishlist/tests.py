@@ -5,8 +5,10 @@ from .models import Place
 # Create your tests here.
 
 
+# Test class for the home page
 class TestHomePage(TestCase):
 
+    # Test that the home page shows an empty list message for an empty database
     def test_home_page_shows_empty_list_message_for_empty_database(self):
         home_page_url = reverse('place_list')
         response = self.client.get(home_page_url)
@@ -14,6 +16,7 @@ class TestHomePage(TestCase):
         self.assertContains(response, 'You have no places in your wishlist')
 
 
+# Test class for the visited page
 class TestVisitedPage(TestCase):
 
     # def test_visited_page_shows_empty_list_message_for_empty_database(self):
@@ -21,6 +24,7 @@ class TestVisitedPage(TestCase):
     #     self.assertTemplateUsed(response, 'travel_wishlist/visited.html')
     #     self.assertContains(response, 'You have not visited any places yet')
 
+    # Test that the visited page shows a message when no places have been visited
     def test_visited_page_shows_no_places_visited_message(self):
         # Get the URL of the visited page
         visited_page_url = reverse('places_visited')
@@ -30,9 +34,11 @@ class TestVisitedPage(TestCase):
         self.assertContains(response, 'You have not visited any places yet')
 
 
+# Test class for the wishlist
 class TestWishList(TestCase):
     fixtures = ['test_places']
 
+    # Test that the wishlist page contains only not visited places
     def test_viewing_wishlist_contains_not_visited_places(self):
         response = self.client.get(reverse('place_list'))
         self.assertTemplateUsed(response, 'travel_wishlist/wishlist.html')
@@ -43,6 +49,7 @@ class TestWishList(TestCase):
         self.assertNotContains(response, 'Moab')
 
 
+# Test class for the visited list
 class TestVisitedList(TestCase):
     fixtures = ['test_places.json']
 
@@ -55,6 +62,7 @@ class TestVisitedList(TestCase):
     #     self.assertContains(response, 'San Francisco')
     #     self.assertContains(response, 'Moab')
 
+    # Test that only visited places are displayed on the visited page
     def test_only_visited_places_displayed(self):
         # Set up visited and not visited places
         visited_places = Place.objects.filter(visited=True)
@@ -71,8 +79,10 @@ class TestVisitedList(TestCase):
             self.assertNotContains(response, place.name)
 
 
+# Test class for adding a new place
 class TestAddNewPlace(TestCase):
 
+    # Test adding a new unvisited place to the wishlist
     def test_add_new_unvisited_place_to_wishlist(self):
         add_place_url = reverse('place_list')
         new_place_data = {'name': 'Tokyo', 'visited': False}
@@ -117,6 +127,7 @@ class TestAddNewPlace(TestCase):
         # Is the data used to render the template, the same as the data in the database?
         self.assertCountEqual(list(places_in_database), list(response_places))
 
+    # Test adding a new visited place to the wishlist
     def test_add_new_visited_place_to_wishlist(self):
         response = self.client.post(reverse('place_list'), {'name': 'Tokyo', 'visited': True}, follow=True)
 
@@ -135,9 +146,11 @@ class TestAddNewPlace(TestCase):
         place_in_database = Place.objects.get(name='Tokyo', visited=True)
 
 
+# Test class for visiting a place
 class TestVisitPlace(TestCase):
     fixtures = ['test_places.json']
 
+    # Test visiting a place
     def test_visit_place(self):
         # visit place pk = 2,  New York
         visit_place_url = reverse('place_was_visited', args=(2,))
@@ -154,6 +167,7 @@ class TestVisitPlace(TestCase):
 
         self.assertTrue(new_york.visited)
 
+    # Test visiting a non-existent place
     def test_visit_non_existent_place(self):
         # visit place with pk = 200, this PK is not in the fixtures
         visit_place_url = reverse('place_was_visited', args=(200,))

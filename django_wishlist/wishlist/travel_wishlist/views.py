@@ -6,14 +6,13 @@ from .forms import NewPlaceForm
 
 
 def place_list(request):
-
-    """If this is a POST request, the user clicked the Add button
+    """ If this is a POST request, the user clicked the Add button
         in the form. Check if the new place is valid, if so, save a
         new Place to the database, and redirect to this same page.
         This creates a GET request to this same route.
 
         If not a POST route, or Place is not valid, display a page with
-        a list of places and a form to add a new place."""
+        a list of places and a form to add a new place. """
 
     if request.method == 'POST':
         form = NewPlaceForm(request.POST)
@@ -30,11 +29,15 @@ def place_list(request):
 
 
 def places_visited(request):
+    # Renders the visited places page with a list of places that have been visited
     visited = Place.objects.filter(visited=True)
     return render(request, 'travel_wishlist/visited.html', {'visited': visited})
 
 
 def place_was_visited(request, place_pk):
+    """ Marks a place as visited when the 'visited' button is clicked.
+        Retrieves the place by its primary key, sets its 'visited' attribute to True,
+        and saves the changes to the database. """
     if request.method == 'POST':
         place = get_object_or_404(Place, pk=place_pk)
         place.visited = True

@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # Admin site URL
     path('admin/', admin.site.urls),
+    # Include URLs from the travel_wishlist app
     path('', include('travel_wishlist.urls'))
 ]

@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+# Set the DJANGO_SETTINGS_MODULE environment variable to 'wishlist.settings'
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wishlist.settings')
-
+# Get the WSGI application for the Django project
 application = get_wsgi_application()

@@ -11,6 +11,9 @@ import os
 
 from django.core.asgi import get_asgi_application
 
+# Set the DJANGO_SETTINGS_MODULE environment variable to 'wishlist.settings'
+# This specifies the settings file for the Django application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wishlist.settings')
 
+# Get the ASGI application for the Django project
 application = get_asgi_application()

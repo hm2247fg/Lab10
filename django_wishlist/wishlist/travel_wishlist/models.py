@@ -14,3 +14,9 @@ class Place(models.Model):
     def __str__(self):
         # Return a string containing the name of the place and its visited status
         return f'{self.name}, visited? {self.visited}'
+
+    def mark_as_visited(self):
+        # Set the 'visited' attribute to True
+        self.visited = True
+        # Save the changes to the database
+        self.save()

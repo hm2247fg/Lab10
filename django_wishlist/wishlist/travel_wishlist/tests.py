@@ -173,3 +173,31 @@ class TestVisitPlace(TestCase):
         visit_place_url = reverse('place_was_visited', args=(200,))
         response = self.client.post(visit_place_url, follow=True)
         self.assertEqual(404, response.status_code)  # not found
+
+
+class PlaceModelTestCase(TestCase):
+    def setUp(self):
+        # Creating two places for testing
+        self.place1 = Place.objects.create(name='Paris', visited=False)
+        self.place2 = Place.objects.create(name='London', visited=True)
+
+    def test_place_creation(self):
+        # Test if places are created correctly
+        self.assertEqual(self.place1.name, 'Paris')
+        self.assertFalse(self.place1.visited)
+
+        self.assertEqual(self.place2.name, 'London')
+        self.assertTrue(self.place2.visited)
+
+    def test_place_str_method(self):
+        # Test the __str__ method of the Place model
+        self.assertEqual(str(self.place1), 'Paris, visited? False')
+        self.assertEqual(str(self.place2), 'London, visited? True')
+
+    def test_place_was_visited(self):
+        # Test the mark_as_visited method of the Place model
+        self.place1.mark_as_visited()
+        self.place2.mark_as_visited()
+
+        self.assertTrue(self.place1.visited)
+        self.assertTrue(self.place2.visited)

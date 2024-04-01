@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b0a72bb-39e2-4e39-abfa-0c323eafbb2c" name="Changes" comment="added comments">
+    <list default="true" id="8b0a72bb-39e2-4e39-abfa-0c323eafbb2c" name="Changes" comment="added more comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/wishlist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/wishlist/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,10 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "settings.editor.splitter.proportion": "0.2874618"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -80,13 +82,22 @@
       <option name="project" value="LOCAL" />
       <updated>1711944910446</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added more comments">
+      <option name="closed" value="true" />
+      <created>1711945309653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711945309653</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated django app" />
     <MESSAGE value="Updated several modules to reflect PPT instructions... added unit tests and functional tests..." />
     <MESSAGE value="added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
+    <MESSAGE value="added more comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more comments" />
   </component>
 </project>

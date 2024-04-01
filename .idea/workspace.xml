@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b0a72bb-39e2-4e39-abfa-0c323eafbb2c" name="Changes" comment="Updated several modules to reflect PPT instructions... added unit tests and functional tests...">
+    <list default="true" id="8b0a72bb-39e2-4e39-abfa-0c323eafbb2c" name="Changes" comment="added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/functional_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/functional_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/travel_wishlist/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_wishlist/wishlist/wishlist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_wishlist/wishlist/wishlist/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +72,21 @@
       <option name="project" value="LOCAL" />
       <updated>1711943116250</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added comments">
+      <option name="closed" value="true" />
+      <created>1711944910446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711944910446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated django app" />
     <MESSAGE value="Updated several modules to reflect PPT instructions... added unit tests and functional tests..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated several modules to reflect PPT instructions... added unit tests and functional tests..." />
+    <MESSAGE value="added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
   </component>
 </project>

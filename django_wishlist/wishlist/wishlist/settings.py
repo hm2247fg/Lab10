@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'travel_wishlist'
 ]
 
+# Defines the middleware classes used in the project for processing requests and responses
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,8 +51,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Specifies the root URL configuration module for the project
 ROOT_URLCONF = 'wishlist.urls'
 
+# Configures template settings for rendering HTML templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,12 +71,14 @@ TEMPLATES = [
     },
 ]
 
+# Defines the WSGI application for the project
 WSGI_APPLICATION = 'wishlist.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# Configures the database settings. In this case, it's set to use SQLite
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -116,6 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# Configures settings for serving static files
 STATIC_URL = '/static/'
 
 # Default primary key field type
